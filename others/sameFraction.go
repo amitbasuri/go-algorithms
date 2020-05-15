@@ -1,16 +1,9 @@
-package main
+package others
 
 import (
 	"fmt"
 	"github.com/kr/pretty"
 )
-
-func main() {
-	//println(Solution([]int{1, 2, 3, 4, 0}, []int{2, 3, 6, 8, 4}))
-
-	println(Solution([]int{3,3,4}, []int{5,4,3}))
-
-}
 
 func qoutient(n int, d int) int {
 	return n / d

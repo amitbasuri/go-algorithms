@@ -1,17 +1,17 @@
-package main
+package others
 
 import (
 	"fmt"
 )
 
 func main() {
-	minimumBribes([]int{1, 2, 5 ,3 ,7 ,8, 6, 4})
+	minimumBribes([]int{1, 2, 5, 3, 7, 8, 6, 4})
 
 }
 
 func minimumBribes(items []int) {
 	var (
-		n = len(items)
+		n      = len(items)
 		sorted = false
 	)
 	var count int
@@ -25,13 +25,13 @@ func minimumBribes(items []int) {
 				if _, ok := swapCount[items[i]]; ok {
 					swapCount[items[i]]++
 				} else {
-					swapCount[items[i]]=1
+					swapCount[items[i]] = 1
 				}
 
 				if _, ok := swapCount[items[i+1]]; ok {
 					swapCount[items[i+1]]++
 				} else {
-					swapCount[items[i+1]]=1
+					swapCount[items[i+1]] = 1
 				}
 				items[i+1], items[i] = items[i], items[i+1]
 				swapped = true
@@ -46,9 +46,9 @@ func minimumBribes(items []int) {
 
 	var notMatched bool
 	q := items
-	for i:= 0; i < len(q); i++ {
-		if q[i] != i+1 || swapCount[i+1] > 2{
-			println(q[i],i+1, swapCount[i+1])
+	for i := 0; i < len(q); i++ {
+		if q[i] != i+1 || swapCount[i+1] > 2 {
+			println(q[i], i+1, swapCount[i+1])
 			notMatched = true
 			break
 		}
@@ -61,11 +61,9 @@ func minimumBribes(items []int) {
 	}
 }
 
-func swap(q[]int, i int, j int) {
+func swap(q []int, i int, j int) {
 	q[i], q[j] = q[j], q[i]
 }
-
-
 
 func rotLeft(a []int32, d int32) []int32 {
 	arrLen := int32(len(a))
@@ -88,7 +86,6 @@ func hourglassSum(arr [][]int32) int32 {
 				arr[i-1][j-1] + arr[i-1][j] + arr[i-1][j+1] +
 				arr[i+1][j-1] + arr[i+1][j] + arr[i+1][j+1]
 
-
 			if inital == false {
 				maxSum = sum
 				inital = true
@@ -102,4 +99,3 @@ func hourglassSum(arr [][]int32) int32 {
 	return maxSum
 
 }
-
