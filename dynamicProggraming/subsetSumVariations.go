@@ -1,4 +1,16 @@
-package dp
+package dynamicProggraming
+
+//Partition problem is to determine whether a given set can be partitioned into two subsets
+//such that the sum of elements in both subsets is same.
+//Examples:
+//
+//arr[] = {1, 5, 11, 5}
+//Output: true
+//The array can be partitioned as {1, 5, 5} and {11}
+//
+//arr[] = {1, 5, 3}
+//Output: false
+//The array cannot be partitioned into equal sum sets.
 
 func equalSumPartition(arr []int, n int) bool {
 	var sum int
@@ -11,6 +23,17 @@ func equalSumPartition(arr []int, n int) bool {
 
 	return subsetSumWithTD(arr, n, sum/2)
 }
+
+//Given an array arr[] of length N and an integer X, the task is to find the number of subsets with sum equal to X.
+//
+//Examples:
+//
+//Input: arr[] = {1, 2, 3, 3}, X = 6
+//Output: 3
+//All the possible subsets are {1, 2, 3}, {1, 2, 3} and {3, 3}
+//
+//Input: arr[] = {1, 1, 1, 1}, X = 1
+//Output: 4
 
 func countSubsetSumRecursive(arr []int, n int, subsetSum int) int {
 	if subsetSum == 0 {
