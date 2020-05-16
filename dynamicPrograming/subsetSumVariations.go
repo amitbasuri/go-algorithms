@@ -21,7 +21,7 @@ func equalSumPartition(arr []int, n int) bool {
 		return false
 	}
 
-	return subsetSumWithTD(arr, n, sum/2)
+	return subsetSumWithBU(arr, n, sum/2)
 }
 
 //Given an array arr[] of length N and an integer X, the task is to find the number of subsets with sum equal to X.

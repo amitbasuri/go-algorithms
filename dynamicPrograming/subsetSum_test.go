@@ -47,21 +47,21 @@ func BenchmarkSubSetSumWithMemo(b *testing.B) {
 
 }
 
-func TestSubsetSumWithTD(t *testing.T) {
-	b := subsetSumWithTD([]int{1, 2, 4, 7, 9}, 5, 19)
+func TestSubsetSumWithBU(t *testing.T) {
+	b := subsetSumWithBU([]int{1, 2, 4, 7, 9}, 5, 19)
 	assert.True(t, b)
 
-	c := subsetSumWithTD([]int{13, 2, 4, 7, 9}, 5, 5)
+	c := subsetSumWithBU([]int{13, 2, 4, 7, 9}, 5, 5)
 	assert.False(t, c)
 }
 
-func BenchmarkSubSetSumWithTD(b *testing.B) {
+func BenchmarkSubSetSumWithBU(b *testing.B) {
 	arr := []int{}
 	for i := 1; i <= 25; i++ {
 		arr = append(arr, i)
 	}
 	for n := 0; n < b.N; n++ {
-		subsetSumWithTD(arr, len(arr), 390)
+		subsetSumWithBU(arr, len(arr), 390)
 	}
 
 }

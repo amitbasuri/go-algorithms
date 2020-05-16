@@ -9,10 +9,10 @@ package dynamicPrograming
 //Output: True
 //Explanation: There is a subset (4, 5) with sum 9.
 
-type sunsetSumTopDown [][]bool
+type sunsetSumBottomUp [][]bool
 
-func subsetSumWithTD(arr []int, n int, sum int) bool {
-	td := make(sunsetSumTopDown, n+1)
+func subsetSumWithBU(arr []int, n int, sum int) bool {
+	td := make(sunsetSumBottomUp, n+1)
 
 	for i := 0; i <= n; i++ {
 		td[i] = make([]bool, sum+1)
@@ -22,7 +22,7 @@ func subsetSumWithTD(arr []int, n int, sum int) bool {
 	return td.subsetSum(arr, n, sum)
 }
 
-func (td sunsetSumTopDown) subsetSum(arr []int, n int, sum int) bool {
+func (td sunsetSumBottomUp) subsetSum(arr []int, n int, sum int) bool {
 
 	for currLen := 1; currLen <= n; currLen++ {
 		for currSum := 1; currSum <= sum; currSum++ {
