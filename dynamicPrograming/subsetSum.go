@@ -60,7 +60,7 @@ func (m subsetSumMemo) subsetSum(arr []int, n int, sum int) bool {
 		if v, ok := m[[2]int{n - 1, sum - arr[n-1]}]; ok {
 			taken = v
 		} else {
-			taken = m.subsetSum(arr, n-1, sum-arr[n-1])
+			taken = m.subsetSum(arr, n-1, sum-arr[n-1]) // don't go to n-1 if unbounded
 			m[[2]int{n - 1, sum - arr[n-1]}] = taken
 		}
 
