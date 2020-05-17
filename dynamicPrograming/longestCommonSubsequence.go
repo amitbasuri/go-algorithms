@@ -21,6 +21,10 @@ func LongestCommonSubsequenceTD(s1 string, s2 string, len1 int, len2 int) int {
 
 }
 
+func ShortestCommonSuperSubsequence(s1 string, s2 string, len1 int, len2 int) int {
+	return len1 + len2 - LongestCommonSubsequenceTD(s1, s2, len1, len2)
+}
+
 func LongestCommonSubstringLength(s1 string, s2 string, len1 int, len2 int) int {
 
 	buArr := make(LongestCommonSubstringLengthBottomUpArr, len1+1) //make arr size adding 1
@@ -52,5 +56,26 @@ func (buArr LongestCommonSubstringLengthBottomUpArr) Fill(s1 string, s2 string, 
 	}
 
 	return i, j
+
+}
+
+func MinNumInsertionDeletionToConvertS1ToS2(s1 string, s2 string, len1 int, len2 int) (int, int) {
+	lcs := LongestCommonSubsequenceTD(s1, s2, len1, len2)
+
+	if len1 > len2 {
+		return len1 - lcs, len2 - lcs
+	}
+	return len2 - lcs, len1 - lcs
+
+}
+
+func LongestPalindromicSubsequenceLength(s string) int {
+	l := len(s)
+	s2Rune := make([]rune, l)
+	for i, r := range s {
+		s2Rune[l-1-i] = r
+	}
+
+	return LongestCommonSubsequenceTD(s, string(s2Rune), l, l)
 
 }

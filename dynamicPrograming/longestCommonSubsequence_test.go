@@ -16,3 +16,10 @@ func TestLongestCommonSubstringLength(t *testing.T) {
 	assert.Equal(t, 2, LongestCommonSubstringLength("abcd", "xadcdt", 4, 6))
 	assert.Equal(t, 0, LongestCommonSubstringLength("qwer", "xaxac", 4, 5))
 }
+
+func TestLongestPalindromicSubsequenceLength(t *testing.T) {
+	assert.Equal(t, 0, LongestPalindromicSubsequenceLength(""))
+	assert.Equal(t, 1, LongestPalindromicSubsequenceLength("a"))
+	assert.Equal(t, 3, LongestPalindromicSubsequenceLength("aebar"))
+
+}
