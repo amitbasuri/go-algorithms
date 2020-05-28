@@ -47,3 +47,11 @@ func TestNearlySortedArrSearch(t *testing.T) {
 	assert.Equal(t, -1, NearlySortedArrSearch([]int{10, 3, 40, 20, 50, 80, 70}, 90))
 	assert.Equal(t, -1, NearlySortedArrSearch([]int{10, 3, 40, 20, 50, 80, 70}, 2))
 }
+
+func TestFloorInSortedArr(t *testing.T) {
+	assert.Equal(t, 40, FloorInSortedArr([]int{10, 20, 30, 40}, 40))
+	assert.Equal(t, 10, FloorInSortedArr([]int{10, 20, 30, 40}, 10))
+	assert.Equal(t, 20, FloorInSortedArr([]int{10, 20, 30, 40}, 25))
+	assert.Equal(t, 30, FloorInSortedArr([]int{10, 20, 30, 40, 60}, 35))
+	assert.Equal(t, -1, FloorInSortedArr([]int{10, 20, 30, 40, 60}, 5))
+}

@@ -13,3 +13,5 @@ Algorithms written in golang
 
 - [Rotation Count in Rotated Sorted array](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L62) <br>
 - [Rotated Sorted Array Search](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L100) <br>
+- [Search in nearly sorted array](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L127) <br>
+- [Floor of an element in a sorted array](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L177) <br>

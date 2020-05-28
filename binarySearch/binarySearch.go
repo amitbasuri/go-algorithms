@@ -166,3 +166,28 @@ func minThreeInts(a, b, c int) int {
 	}
 	return c
 }
+
+//FIND FLOOR OF AN ELEMENT IN A SORTED ARRAY:
+//Given a sorted array and a value x, the floor of x is the largest element in array smaller than or equal to x.
+//Write efficient functions to find floor of x.
+//Example:
+//Input : arr[] = {1, 2, 8, 10, 10, 12, 19}, x = 5
+//Output : 2
+//2 is the largest element in arr[] smaller than 5.
+func FloorInSortedArr(arr []int, key int) int {
+	start := 0
+	end := len(arr) - 1
+	result := -1
+	for start <= end {
+		mid := start + (end-start)/2
+		if arr[mid] == key {
+			return key
+		} else if arr[mid] > key {
+			end = mid - 1 //search left
+		} else {
+			result = arr[mid]
+			start = mid + 1
+		}
+	}
+	return result
+}
