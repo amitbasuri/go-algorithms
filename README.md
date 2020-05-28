@@ -1,7 +1,7 @@
 # go-algorithms
 Algorithms written in golang
 
-![](https://github.com/amitbasuri/go-algo/workflows/Test/badge.svg)
+![](https://github.com/amitbasuri/go-algorithms/workflows/Test/badge.svg)
 
 
 ### Dynamic Programing
