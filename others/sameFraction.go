@@ -2,7 +2,6 @@ package others
 
 import (
 	"fmt"
-	"github.com/kr/pretty"
 )
 
 func qoutient(n int, d int) int {
@@ -39,7 +38,6 @@ func Solution(X []int, Y []int) int {
 			max = maxFractionMap[key]
 		}
 	}
-	pretty.Pr
 
 	return max
 }
