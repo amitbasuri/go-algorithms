@@ -191,3 +191,25 @@ func FloorInSortedArr(arr []int, key int) int {
 	}
 	return result
 }
+
+//Given an array of letters sorted in ascending order,
+//find the smallest letter in the the array which is greater than a given key letter.
+func NextLetter(str string, key string) string {
+	start := 0
+	end := len(str) - 1
+
+	result := ""
+
+	for start <= end {
+		mid := start + (end-start)/2
+		if string(str[mid]) == key {
+			return key
+		} else if string(str[mid]) > key { //search left
+			result = string(str[mid])
+			end = mid - 1
+		} else {
+			start = mid + 1
+		}
+	}
+	return result
+}
