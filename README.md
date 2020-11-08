@@ -15,3 +15,7 @@ Algorithms written in golang
 - [Rotated Sorted Array Search](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L100) <br>
 - [Search in nearly sorted array](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L127) <br>
 - [Floor of an element in a sorted array](https://github.com/amitbasuri/go-algorithms/blob/master/binarySearch/binarySearch.go#L177) <br>
+
+### Coursera Algorithms Specialization
+
+- [Week 1: Divide And Conquer](https://github.com/amitbasuri/go-algorithms/blob/master/coursera/week1_divideAndConquer.go) <br>

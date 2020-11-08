@@ -11,7 +11,6 @@ func MaxNonNegSubArr(inputArr []int) []int {
 	var startIndex, endIndex, sum int
 	var maxStartIndex, maxEndIndex, maxSum int
 	var startNew bool = true
-
 	for i, n := range inputArr {
 		if n < 0 {
 			if startNew {
