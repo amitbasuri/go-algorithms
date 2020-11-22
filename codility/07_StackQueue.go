@@ -47,3 +47,37 @@ func FishSolution(sizes []int, directions []int) int {
 	return len(fishStack)
 
 }
+
+// StoneWall
+func StoneWallSolution(height []int) int {
+	var sol int
+
+	for len(height) > 0 {
+
+		if len(height) == 1 {
+			sol++
+			break
+		}
+
+		first := height[0]
+		if first == 0 {
+			height = height[1:] //remove first
+			continue
+		}
+
+		for i := 1; i < len(height); i++ {
+			//if curr <  first
+			if height[i] < first {
+				break
+			}
+			height[i] = height[i] - first
+		}
+
+		height = height[1:] //remove first
+		sol++
+
+	}
+
+	return sol
+
+}
