@@ -2,6 +2,8 @@
 Algorithms written in golang
 
 ![](https://github.com/amitbasuri/go-algorithms/workflows/Test/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/amitbasuri/go-algorithms)](https://goreportcard.com/report/github.com/amitbasuri/go-algorithms)
+
 
 
 ### Dynamic Programing
