@@ -1,4 +1,4 @@
-package dynamicPrograming
+package dynamicprograming
 
 //Rod Cutting Problem
 //Given a rod of length n inches and an array of prices that contains prices of

@@ -1,4 +1,4 @@
-package hashMaps
+package hashmaps
 
 func CountTriplets(arr []int64, r int64) int64 {
 	var total int64

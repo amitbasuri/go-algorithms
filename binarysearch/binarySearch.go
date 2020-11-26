@@ -1,4 +1,4 @@
-package binarySearch
+package binarysearch
 
 // Binary Search  Ascending order
 func SearchAsc(arr []int, key int) int {

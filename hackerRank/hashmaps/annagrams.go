@@ -1,4 +1,4 @@
-package hashMaps
+package hashmaps
 
 func SherlockAndAnagrams(s string) int32 {
 	subStingMapAlpha := make(map[[26]int]int, 0)

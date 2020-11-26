@@ -1,4 +1,4 @@
-package binarySearch
+package binarysearch
 
 // figure out search space
 // calculate mid

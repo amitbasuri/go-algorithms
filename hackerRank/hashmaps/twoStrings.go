@@ -1,4 +1,4 @@
-package hashMaps
+package hashmaps
 
 func twoStrings(s1 string, s2 string) string {
 	s1Map := make(map[rune]struct{})

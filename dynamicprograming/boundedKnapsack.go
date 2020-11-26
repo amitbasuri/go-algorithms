@@ -1,4 +1,4 @@
-package dynamicPrograming
+package dynamicprograming
 
 //0-1 Knapsack Problem | DP-10
 //Given weights and values of n items, put these items in a knapsack of capacity W to get the maximum

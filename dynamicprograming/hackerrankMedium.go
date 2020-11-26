@@ -1,4 +1,4 @@
-package dynamicPrograming
+package dynamicprograming
 
 //https://www.hackerrank.com/challenges/equal/problem
 //Equal

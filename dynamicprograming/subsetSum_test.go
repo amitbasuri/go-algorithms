@@ -1,4 +1,4 @@
-package dynamicPrograming
+package dynamicprograming
 
 import (
 	"github.com/stretchr/testify/assert"

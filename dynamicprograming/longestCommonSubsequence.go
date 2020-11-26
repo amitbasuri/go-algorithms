@@ -1,4 +1,4 @@
-package dynamicPrograming
+package dynamicprograming
 
 func LongestCommonSubsequenceTD(s1 string, s2 string, len1 int, len2 int) int {
 
