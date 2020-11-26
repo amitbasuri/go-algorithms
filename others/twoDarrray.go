@@ -78,7 +78,7 @@ func rotLeft(a []int32, d int32) []int32 {
 }
 
 func hourglassSum(arr [][]int32) int32 {
-	var inital bool
+	var initial bool
 	var maxSum int32
 	for i := 1; i < 5; i++ {
 		for j := 1; j < 5; j++ {
@@ -86,9 +86,9 @@ func hourglassSum(arr [][]int32) int32 {
 				arr[i-1][j-1] + arr[i-1][j] + arr[i-1][j+1] +
 				arr[i+1][j-1] + arr[i+1][j] + arr[i+1][j+1]
 
-			if inital == false {
+			if initial == false {
 				maxSum = sum
-				inital = true
+				initial = true
 			}
 			if sum > maxSum {
 				maxSum = sum
