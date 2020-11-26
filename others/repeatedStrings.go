@@ -14,7 +14,7 @@ func repeatedString(s string, n int64) int64 {
 	var n1 int64
 	var r2 int64
 
-	for i:=0; i<len(s); i++ {
+	for i := 0; i < len(s); i++ {
 		if string(s[i]) == "a" {
 			n1++
 			if int64(i) < rem {
@@ -25,6 +25,6 @@ func repeatedString(s string, n int64) int64 {
 	}
 
 	sol = qou*n1 + r2
-	return  sol
+	return sol
 
 }

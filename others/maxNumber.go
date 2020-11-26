@@ -1,6 +1,5 @@
 package others
 
-
 func opposite(n int) int {
 	return 0 - n
 }
@@ -19,7 +18,7 @@ func SolutionMaxNumber(A []int) int {
 
 	for _, n := range A {
 		if seenModValue, ok := modMap[mod(n)]; ok {
-			if seenModValue+n == 0  {
+			if seenModValue+n == 0 {
 				if seenModValue > max {
 					max = seenModValue
 				}

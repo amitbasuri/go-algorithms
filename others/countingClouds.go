@@ -22,7 +22,7 @@ func jumpingOnClouds(clouds []int) int {
 		}
 	}
 
-	if index == len(clouds) - 2 {
+	if index == len(clouds)-2 {
 		jumps++
 	}
 
@@ -30,14 +30,14 @@ func jumpingOnClouds(clouds []int) int {
 }
 
 func nextJumpIndex(clouds []int, currIndex int) int {
-	if currIndex < len(clouds) - 2 {
+	if currIndex < len(clouds)-2 {
 		if clouds[currIndex+2] == 0 {
 			return currIndex + 2
 		} else {
 			return currIndex + 1
 		}
 	} else {
-			return currIndex + 1
+		return currIndex + 1
 	}
 
 }
