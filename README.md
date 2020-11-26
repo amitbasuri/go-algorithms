@@ -18,4 +18,4 @@ Algorithms written in golang
 
 ### Coursera Algorithms Specialization
 
-- [Week 1: Divide And Conquer](https://github.com/amitbasuri/go-algorithms/blob/master/coursera/week1_divideAndConquer.go) <br>
+- [Divide And Conquer](https://github.com/amitbasuri/go-algorithms/blob/master/coursera/divideAndConquer.go) <br>
