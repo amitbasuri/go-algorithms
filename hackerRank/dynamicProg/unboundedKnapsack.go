@@ -37,7 +37,7 @@ func (p *unboundedKnapsackProbSoln) recursiveUnboundedKnapsack(remaining map[int
 	}
 
 	// condition
-	for a, _ := range remaining {
+	for a := range remaining {
 		// take
 		if sumIntMap(taken)+a <= p.Max {
 			newTaken := map[int]int{}

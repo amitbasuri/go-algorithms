@@ -23,7 +23,7 @@ func checkMagazine(magazine []string, note []string) {
 		}
 	}
 
-	for c, _ := range noteMapMultipleWords {
+	for c := range noteMapMultipleWords {
 		if noteMap[c] > magMap[c] {
 			fmt.Println("No")
 			return
