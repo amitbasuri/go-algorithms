@@ -1,13 +1,7 @@
 package coursera
 
 import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
 	"reflect"
-	"sort"
-	"strconv"
-	"strings"
 	"testing"
 )
 
@@ -177,23 +171,23 @@ func Test_countSplitInv(t *testing.T) {
 
 func Test_countSplitInversions(t *testing.T) {
 
-	path := "https://d3c33hcgiwev3.cloudfront.net/_bcb5c6658381416d19b01bfc1d3993b5_IntegerArray.txt?Expires=1606176000&Signature=Ecoaj6dddKxGM6DfuSCf1prN1fVD2khs3G-0N50q6LBz7-qZYU7Reptb78p82Nf0vZrRE~-Rij1REQ6IzEC2Umhduy8Mm6jCi9iIOmk8f1~PoMD7LSXIHzZ7mcvBkYjRwEb6E4HOfDXokWn462k3jqfzrKf4F8LSPO0yYuuVpUU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A"
-	res, _ := http.Get(path)
-	b, _ := ioutil.ReadAll(res.Body)
-	nums := strings.Split(string(b), "\r\n")
-	nums = nums[:len(nums)-1]
-	arr := make([]int, len(nums), len(nums))
+	// path := "https://d3c33hcgiwev3.cloudfront.net/_bcb5c6658381416d19b01bfc1d3993b5_IntegerArray.txt?Expires=1606176000&Signature=Ecoaj6dddKxGM6DfuSCf1prN1fVD2khs3G-0N50q6LBz7-qZYU7Reptb78p82Nf0vZrRE~-Rij1REQ6IzEC2Umhduy8Mm6jCi9iIOmk8f1~PoMD7LSXIHzZ7mcvBkYjRwEb6E4HOfDXokWn462k3jqfzrKf4F8LSPO0yYuuVpUU_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A"
+	// res, _ := http.Get(path)
+	// b, _ := ioutil.ReadAll(res.Body)
+	// nums := strings.Split(string(b), "\r\n")
+	// nums = nums[:len(nums)-1]
+	// arr := make([]int, len(nums), len(nums))
 
-	var err error
-	for i := 0; i < len(nums); i++ {
-		arr[i], err = strconv.Atoi(nums[i])
-		if err != nil {
-			fmt.Println(err, i)
-		}
-	}
-	arrCopy := make([]int, len(nums), len(nums))
-	copy(arrCopy, arr)
-	sort.Ints(arrCopy)
+	// var err error
+	// for i := 0; i < len(nums); i++ {
+	// 	arr[i], err = strconv.Atoi(nums[i])
+	// 	if err != nil {
+	// 		fmt.Println(err, i)
+	// 	}
+	// }
+	// arrCopy := make([]int, len(nums), len(nums))
+	// copy(arrCopy, arr)
+	// sort.Ints(arrCopy)
 
 	type args struct {
 		arr []int
@@ -208,7 +202,7 @@ func Test_countSplitInversions(t *testing.T) {
 		{name: "2", args: args{arr: []int{1, 2, 3, 4, 5, 6}}, want: []int{1, 2, 3, 4, 5, 6}, want1: 0},
 		{name: "3", args: args{arr: []int{6, 5, 4, 3, 2, 1}}, want: []int{1, 2, 3, 4, 5, 6}, want1: 15},
 		{name: "4", args: args{arr: []int{1, 2, 3}}, want: []int{1, 2, 3}, want1: 0},
-		{name: "coursera", args: args{arr: arr}, want: arrCopy, want1: 2407905288},
+		//{name: "coursera", args: args{arr: arr}, want: arrCopy, want1: 2407905288},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
